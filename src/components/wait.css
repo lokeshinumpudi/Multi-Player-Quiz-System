@@ -44,6 +44,8 @@ font-weight: 700;
   padding: 1.2em;
   background-color: #fff;
   border: 1px solid rgb(98, 0, 234,0.5);
+
+  margin: 10%;
   /*flex: 1 auto;*/
 }
 
@@ -402,6 +404,13 @@ animation-name: shake;
 }
 
 
+
+@media all and (min-width: 600px) {
+  .footer {
+    flex: 1 auto !important;
+    left: 18%
+  }
+  }
 
 .footer{
   position:absolute;
