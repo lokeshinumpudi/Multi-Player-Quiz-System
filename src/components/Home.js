@@ -10,15 +10,15 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
 
-const styles={
-   underlineStyle: {
+const styles = {
+  underlineStyle: {
     borderColor: "#6200EA",
   },
   floatingLabelFocusStyle: {
     color: "#6200EA",
   },
 }
-const config  = {
+const config = {
   apiKey: "AIzaSyDtt-apAmBvAHRugPwkXvYnsiNLTiMg684",
   authDomain: "multiplayer-quiz-38a93.firebaseapp.com",
   databaseURL: "https://multiplayer-quiz-38a93.firebaseio.com",
@@ -146,32 +146,39 @@ class Home extends Component {
     // console.log(this.props.match.params);
     return (
       <div className="Home">
-        <div className="card">
-         <form ref="form" onSubmit={this.findLobby}>
-          {/*<input ref="username" type="text" placeholder="Username" />*/}
-          <TextField ref="username" floatingLabelFocusStyle={styles.floatingLabelFocusStyle} underlineFocusStyle={styles.underlineStyle}  floatingLabelText="Enter Username" floatingLabelFixed={true} />
-          {/*<input type="submit" value="Play" />*/}
-          <RaisedButton type="submit"  backgroundColor="#6200EA" labelColor="#fff" label="Play" />
-        </form>
-        </div>
-       
-        <CustomRedirect lobby={this.props.store} />
-      </div>
-    );
-  }
-}
 
+
+        <div className="jumbotron">
+          <h1 className="display-3">Welcome to the Quiz Game!</h1>
+          <p className="lead">Compete with other players in real time with similar tastes as you.Enter your name & wait for others to join for a game together.</p>
+           </div>
+
+          <div className="card text-white bg-success mb-3">
+            <form ref="form" onSubmit={this.findLobby}>
+              {/*<input ref="username" type="text" placeholder="Username" />*/}
+              <TextField ref="username" floatingLabelFocusStyle={styles.floatingLabelFocusStyle} underlineFocusStyle={styles.underlineStyle} floatingLabelText="Enter Username" floatingLabelFixed={true} />
+              {/*<input type="submit" value="Play" />*/}
+              <RaisedButton type="submit" backgroundColor="#6200EA" labelColor="#fff" label="Play" />
+            </form>
+          </div>
+
+          <CustomRedirect lobby={this.props.store} />
+        </div>
+        );
+      }
+    }
+    
 function mapState(store) {
   return {
-    store
-  };
-}
-
+          store
+        };
+      }
+      
 function mapDispatch(dispatch) {
   return {
-    setUser: user => {
-      dispatch({ type: "SET_USER", user });
+          setUser: user => {
+          dispatch({ type: "SET_USER", user });
+        }
+      };
     }
-  };
-}
-export default connect(mapState, mapDispatch)(Home);
+    export default connect(mapState, mapDispatch)(Home);
