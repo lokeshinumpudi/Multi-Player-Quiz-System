@@ -7,105 +7,125 @@
     border-radius: 10px;
 }*/
 body{
-    background-color: #e2e1e0;
-    color: #212121;
+  background-color: #e2e1e0;
+  color: #212121;
 }
 /*Home screen*/
 
 .Home{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
 
 }
 
-.Home >.card{
-    padding: 1.2em;
-    background-color: #fff;
-    /*flex: 1 auto;*/
+.Home >.jumbotron{
+padding: 2rem 1rem;
+margin-bottom: 2rem;
+background-color: #ffffff;
+border-radius: 0.3rem;
+border: 1px solid rgb(98, 0, 234,0.7);
+}
+
+.jumbotron >.display-3{
+color: #6200EA;
+/* color: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(98,0,234,1) 35%, rgba(0,212,255,1) 100%); */
+}
+
+.jumbotron > .lead{
+color: #3F8EFC;
+font-weight: 700;
+}
+
+.Home >.card,.waitPlayers >.card{
+  padding: 1.2em;
+  background-color: #fff;
+  border: 1px solid rgb(98, 0, 234,0.5);
+  /*flex: 1 auto;*/
 }
 
 
 .waitPlayers{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
 }
 
 .waitPlayers span.violet{
-  background-color: #6200EA;  
-  color: #fff;
-  padding: 4px;
-  border-radius: 52px;
-  font-weight: 700;
-  font-size: 14px;
-  
+background-color: #6200EA;  
+color: #fff;
+padding: 4px;
+border-radius: 52px;
+font-weight: 700;
+font-size: 14px;
+
 }
 
-.waitPlayers >.card{
-    padding: 1.2em;
-    background-color: #fff;
-    /*flex: 1 auto;*/
-}
+/* .waitPlayers >.card{
+  padding: 1.2em;
+  background-color: #fff;
+
+} */
 
 .waitPlayers .center{
-  position: relative;
-    text-align: center;
-    color: #6200EA;
-    font-weight: 700;
-    margin-bottom: -8px;
-    margin-top: 10px;
+position: relative;
+  text-align: center;
+  color: #6200EA;
+  font-weight: 700;
+  margin-bottom: -8px;
+  margin-top: 10px;
 }
 
 
 
 
 .questions_status span.question_correct{
-    color: white;
-    background: green;
-    border: 3px solid green;
-    padding: 2px;
+  color: white;
+  background: green;
+  border: 3px solid green;
+  padding: 2px;
 }
 
 .questions_status span.question_wrong{
-    color: white;
-    background: red;
-    border: 2px solid red;
+  color: white;
+  background: red;
+  border: 2px solid red;
 }
 
 /*peek mode*/
 
 .questions_status.peek span{
-    cursor: pointer;
+  cursor: pointer;
 }
 
 
 
 
 .questions_status span{
-    color: white;
-    background: black;
-    border: 2px solid black;
+  color: white;
+  background: black;
+  border: 2px solid black;
 }
 
 
 
 
 .leaderboard strong{
-    position: relative;
-    padding: 5px;
-    margin: 1px;
-    
+  position: relative;
+  padding: 5px;
+  margin: 1px;
+  
 }
 
 .player_leaderboard{
 margin-top: 10px;
- position: relative;
- margin-bottom: 15px;
+position: relative;
+margin-bottom: 15px;
 }
 
 
@@ -113,147 +133,147 @@ margin-top: 10px;
 /*Timer*/
 
 .Timer{
-   position: relative;
-   left: -22.8px;
-   width: 115% !important;
-   top: -22.7px;
+ position: relative;
+ left: -22.8px;
+ width: 115% !important;
+ top: -22.7px;
 
 }
 
 
 .peekAnswer{
-    position: relative;
-    padding: 17px;
-    color: white;
-    font-weight: 600;
-    margin: 1px;
+  position: relative;
+  padding: 17px;
+  color: white;
+  font-weight: 600;
+  margin: 1px;
 }
 
 
 .submitButton{
-  display: flex !important;
-  text-align: center;
-  margin-top: 14px;
-  margin-bottom: -10px;
-  
+display: flex !important;
+text-align: center;
+margin-top: 14px;
+margin-bottom: -10px;
+
 }
 /*Game center styling using flexbox*/
 
 @media all and (min-width: 600px) {
-  .aside {
-    flex: 1 auto !important;
-  }
+.aside {
+  flex: 1 auto !important;
+}
 }
 
 @media all and (min-width: 800px) {
 
-  .Timer{
-     width: 105.6% !important;
-  }
-  .quiz_form {
-    order: 1 ;
+.Timer{
+   width: 105.6% !important;
+}
+.quiz_form {
+  order: 1 ;
+  margin-left: 10em;
+  margin-right: 3em;
+  /*max-width: 50%;*/
+}
+
+.game_over{
+    order :1;
     margin-left: 10em;
-    margin-right: 3em;
-    /*max-width: 50%;*/
-  }
+  margin-right: 3em;
+  max-width: 50%;
+  
+}
 
-  .game_over{
-      order :1;
-      margin-left: 10em;
-    margin-right: 3em;
-    max-width: 50%;
-    
-  }
+.leaderboard{
+    order: 2;
+    max-width: 10%;
+    margin-right: 1em;
+}
 
-  .leaderboard{
-      order: 2;
-      max-width: 10%;
-      margin-right: 1em;
-  }
-
-  .peekAnswer{
-      max-width: 69.5%;
-    left: 11.4%;
-    margin: 10px;
-  }
+.peekAnswer{
+    max-width: 69.5%;
+  left: 11.4%;
+  margin: 10px;
+}
 }
 
 .GameCenter{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    font-weight: 600;
-    
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-weight: 600;
+  
 }
 
 .GameCenter > * {
-    padding: 10px;
-    flex: 1 100%;
+  padding: 10px;
+  flex: 1 100%;
 }
 
 .User{
-    position: relative;
-    padding: 1px;
-    text-align: center;
+  position: relative;
+  padding: 1px;
+  text-align: center;
 }
 
 .User span{
-    display: block;
-    padding: 0.4em;
+  display: block;
+  padding: 0.4em;
 }
 div.questions_status{
-   text-align: center;
+ text-align: center;
 }
 
 .quiz_form{
-    background-color: #fff;
-    padding: 1.4em;  
-    margin-bottom: 10px;
+  background-color: #fff;
+  padding: 1.4em;  
+  margin-bottom: 10px;
 }
 
 .quiz_form > .Question{
-  margin-bottom: 10px;
-  padding: 4px;
-  color: #6200EA !important;
-  font-weight: 600;
-  font-size: 18px;
+margin-bottom: 10px;
+padding: 4px;
+color: #6200EA !important;
+font-weight: 600;
+font-size: 18px;
 
 }
 
 .Options{
-  margin-top: 10px;
-  padding: 5px;
+margin-top: 10px;
+padding: 5px;
 }
 .game_over{
-    background-color: #fff;
-    padding: 1.4em;
-    text-align: center;
-    margin-bottom: 10px;
+  background-color: #fff;
+  padding: 1.4em;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .leaderboard{
-    background-color:#fff;
-    padding: 1.4em;
-    margin-bottom: 10px;
-    text-align: center
+  background-color:#fff;
+  padding: 1.4em;
+  margin-bottom: 10px;
+  text-align: center
 
 }
 
 
 .card {
- box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-  transition: all 0.5s cubic-bezier(.25,.8,.25,1);
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+transition: all 0.5s cubic-bezier(.25,.8,.25,1);
 }
 
 .card:hover{
- box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .card .waitLoading{
-  height: 3px !important;
-  top: -19px;
-  left: -20px !important;
-  width: 117% !important;
+height: 3px !important;
+top: -19px;
+left: -20px !important;
+width: 117% !important;
 
 }
 
@@ -263,120 +283,120 @@ div.questions_status{
 /*Animations*/
 
 .animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
+animation-duration: 1s;
+animation-fill-mode: both;
 }
 
 .animated.repeat{
-    animation-iteration-count: 4;
+  animation-iteration-count: 4;
 }
 .animated.infinite {
-  animation-iteration-count: infinite;
+animation-iteration-count: infinite;
 }
 
 .animated.hinge {
-  animation-duration: 2s;
+animation-duration: 2s;
 }
 
 .animated.flipOutX,
 .animated.flipOutY,
 .animated.bounceIn,
 .animated.bounceOut {
-  animation-duration: .75s;
+animation-duration: .75s;
 }
 
 /*Bounce In*/
 
 @keyframes bounceIn {
-  from, 20%, 40%, 60%, 80%, to {
-    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  }
+from, 20%, 40%, 60%, 80%, to {
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+}
 
-  0% {
-    opacity: 0;
-    transform: scale3d(.3, .3, .3);
-  }
+0% {
+  opacity: 0;
+  transform: scale3d(.3, .3, .3);
+}
 
-  20% {
-    transform: scale3d(1.1, 1.1, 1.1);
-  }
+20% {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
 
-  40% {
-    transform: scale3d(.9, .9, .9);
-  }
+40% {
+  transform: scale3d(.9, .9, .9);
+}
 
-  60% {
-    opacity: 1;
-    transform: scale3d(1.03, 1.03, 1.03);
-  }
+60% {
+  opacity: 1;
+  transform: scale3d(1.03, 1.03, 1.03);
+}
 
-  80% {
-    transform: scale3d(.97, .97, .97);
-  }
+80% {
+  transform: scale3d(.97, .97, .97);
+}
 
-  to {
-    opacity: 1;
-    transform: scale3d(1, 1, 1);
-  }
+to {
+  opacity: 1;
+  transform: scale3d(1, 1, 1);
+}
 }
 @keyframes shake {
-  from, to {
-    transform: translate3d(0, 0, 0);
-  }
+from, to {
+  transform: translate3d(0, 0, 0);
+}
 
-  10%, 30%, 50%, 70%, 90% {
-    transform: translate3d(-10px, 0, 0);
-  }
+10%, 30%, 50%, 70%, 90% {
+  transform: translate3d(-10px, 0, 0);
+}
 
-  20%, 40%, 60%, 80% {
-    transform: translate3d(10px, 0, 0);
-  }
+20%, 40%, 60%, 80% {
+  transform: translate3d(10px, 0, 0);
+}
 }
 @keyframes pulse {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
+from {
+  transform: scale3d(1, 1, 1);
+}
 
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
+50% {
+  transform: scale3d(1.05, 1.05, 1.05);
+}
 
-  to {
-    transform: scale3d(1, 1, 1);
-  }
+to {
+  transform: scale3d(1, 1, 1);
+}
 }
 @keyframes tada {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
+from {
+  transform: scale3d(1, 1, 1);
+}
 
-  10%, 20% {
-    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
-  }
+10%, 20% {
+  transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+}
 
-  30%, 50%, 70%, 90% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
-  }
+30%, 50%, 70%, 90% {
+  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+}
 
-  40%, 60%, 80% {
-    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
-  }
+40%, 60%, 80% {
+  transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+}
 
-  to {
-    transform: scale3d(1, 1, 1);
-  }
+to {
+  transform: scale3d(1, 1, 1);
+}
 }
 
 .bounceIn {
-  animation-name: bounceIn;
+animation-name: bounceIn;
 }
 
 .pulse {
-  animation-name: pulse;
+animation-name: pulse;
 }
 .tada {
-  animation-name: tada;
+animation-name: tada;
 }
 .shake {
-  animation-name: shake;
+animation-name: shake;
 }
