@@ -400,3 +400,21 @@ animation-name: tada;
 .shake {
 animation-name: shake;
 }
+
+
+
+.footer{
+  position:absolute;
+  display:  inline-block;
+  bottom :10px;
+  margin: 15px;
+  padding :15px;
+  color: #6200EA;
+  font-weight: 700;
+  font-size:19px;
+}
+
+.footer a{
+  color: white;
+  background-color: #6200EA
+}
