@@ -408,7 +408,7 @@ animation-name: shake;
 @media all and (min-width: 600px) {
   .footer {
     flex: 1 auto !important;
-    left: 18%
+    left: 22%
   }
   }
 

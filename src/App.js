@@ -24,7 +24,11 @@ const App = () => (
       <Route exact path="/Game_Center" component={GameCenter} />
 
      <div className="footer">
-       Made as an experiment to learn React.js, Redux and Firebase by <a target="blank" href="https://twitter.com/lokeshinumpudi"> Lokesh Inumpudi</a>
+       Made as an experiment to learn React.js, Redux and Firebase by
+        <a target="blank" href="https://twitter.com/lokeshinumpudi"> Lokesh Inumpudi. </a> 
+        Source at
+        <a target="blank" href="https://github.com/lokeshinumpudi/Multi-Player-Quiz-System"> Github</a> 
+       
        </div>
     </div>
   </Router>
